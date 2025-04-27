@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { NextPage } from 'next';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image';
 import job1 from '../../../public/assets/job1.png';
 import job2 from '../../../public/assets/job2.png';
 import job3 from '../../../public/assets/job3.png';
-const CarouselIMages: NextPage = ({}) => {
+const CarouselIMages= ({}) => {
 
   return (
     <Carousel data-bs-theme="dark">

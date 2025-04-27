@@ -1,9 +1,8 @@
-import { NextPage } from 'next'
 import Image from 'next/image';
 import logo from '../../../public/assets/image.png';
 
 
-const HeaderComponent: NextPage = ({}) => {
+const HeaderComponent = ({}) => {
   return (
     <nav className="navbar bg-primary">
       <div className="container">
