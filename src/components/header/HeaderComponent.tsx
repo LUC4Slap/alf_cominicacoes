@@ -24,12 +24,12 @@ const HeaderComponent = ({}) => {
               href="#contatos">
               Home
             </a>
-            <a className="nav-link text-white" href="#">
-              Sobre
+            <a className="nav-link text-white" href="#trabalhos">
+              Trabalhos
             </a>
-            <a className="nav-link text-white" href="#">
+            {/* <a className="nav-link text-white" href="#">
               Pricing
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
