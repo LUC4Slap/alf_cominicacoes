@@ -21,7 +21,7 @@ const HeaderComponent = ({}) => {
             <a
               className="nav-link active text-white"
               aria-current="page"
-              href="#contatos">
+              href="#home">
               Home
             </a>
             <a className="nav-link text-white" href="#trabalhos">

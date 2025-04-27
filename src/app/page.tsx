@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="trabalhos mt-3">
+        <section id="trabalhos" className="mt-3">
           <TrabalhosGrafica />
         </section>
 
