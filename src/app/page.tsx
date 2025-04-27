@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import WhatsAppButton from '@/components/whatsappButton/WhatsAppButton';
 import CarouselIMages from '@/components/carousel/CarouselIMages';
 import HeaderComponent from '@/components/header/HeaderComponent';
-// import Map from '@/components/map/Map';
+import Map from '@/components/map/Map';
 import TrabalhosGrafica from '@/components/trabalhos/TrabalhosComponent';
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
           <div className='d-flex flex-column justify-content-center align-items-center'>
             <h4>Onde estamos!</h4>
           </div>
-          {/* <Map latitude={-20.531431} longitude={-54.6139699} /> */}
+          <Map latitude={-20.531431} longitude={-54.6139699} />
         </section>
       </div>
     </>
