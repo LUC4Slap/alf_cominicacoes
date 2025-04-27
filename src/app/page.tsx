@@ -1,95 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'leaflet/dist/leaflet.css';
+
+import WhatsAppButton from '@/components/whatsappButton/WhatsAppButton';
+import CarouselIMages from '@/components/carousel/CarouselIMages';
+import HeaderComponent from '@/components/header/HeaderComponent';
+import Map from '@/components/map/Map';
+import TrabalhosGrafica from '@/components/trabalhos/TrabalhosComponent';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <HeaderComponent />
+      <div className="container-fluid">
+        <div className="btn-contato">
+          <WhatsAppButton />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <section className="bg-primary mt-3 p-3 rounded-3">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <p style={{ fontSize: '20px' }} className="text-white">
+              Amelhor Impressão
+            </p>
+            <h1 className="text-white">ALF Comunicações</h1>
+          </div>
+        </section>
+
+        <section className="mt-2" id="home">
+          <div className="bg-dark">
+            <CarouselIMages />
+          </div>
+        </section>
+
+        <section id="trabalhos mt-3">
+          <TrabalhosGrafica />
+        </section>
+
+        <section className="mt-4" id="infos">
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+            <h4>Onde estamos!</h4>
+          </div>
+          <Map latitude={-20.531431} longitude={-54.6139699} />
+        </section>
+      </div>
+    </>
   );
 }
